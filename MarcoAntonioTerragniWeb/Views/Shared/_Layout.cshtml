@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="corporate, creative, general, portfolio, photography, blog, e-commerce, shop, product, gallery, retina, responsive">
+    
+    <!--favicon icon-->
+    <link rel="icon" type="image/png" href="~/Content/images/favicon.png">
+    <title>Marco Antonio Terragni</title>
+    
+    <!--common style-->
+    <link href='http://fonts.googleapis.com/css?family=Abel|Source+Sans+Pro:400,300,300italic,400italic,600,600italic,700,700italic,900,900italic,200italic,200' rel='stylesheet' type='text/css'>
+    
+    @RenderSection("Styles", required: false)
+    @Styles.Render("~/Content/css")
+
+</head>
+<body>
+    <!-- preloader start -->
+    <div id="tb-preloader">
+        <div class="tb-preloader-wave"></div>
+    </div>
+    <!-- preloader end -->
+    <div class="wrapper">
+        <!--header start -->
+        <header class="l-header">
+            <div class="l-navbar l-navbar_expand l-navbar_t-light js-navbar-sticky">
+                <div class="container-fluid">
+                    <nav class="menuzord js-primary-navigation" role="navigation" aria-label="Primary Navigation">
+                        <!--logo start-->
+                        <a href="index.html" class="logo-brand ">
+                            @*<img class="retina" src="assets/img/logo.png" alt="" />*@
+                        </a>
+                        <!--logo end-->
+                        <!--mega menu start-->
+                        <ul class="menuzord-menu menuzord-right c-nav_s-underline">
+                            <li>
+                                <a href="@Url.Action("Index", "Home")">Inicio</a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("AboutMe", "Home")">Sobre mí</a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Index", "Articles")">Artículos</a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Contact", "Home")">Contacto</a>
+                            </li>
+                        </ul>
+                        <!--mega menu end-->
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <!--header end -->
+
+        @RenderBody()
+
+        <!--footer start -->
+    <footer id="footer" class="dark">
+        <div class="primary-footer">
+            <div class="container">
+                <div class="row">
+                    @*<div class="col-md-3">
+                        <a href="#" class="m-bot-20 footer-logo">
+                            <img class="retina" src="assets/img/logo-dark.png" alt="" />
+                        </a>
+                        <p>Massive is fully responsible, performance oriented and SEO optimized, retina ready WordPress theme.</p>
+
+                    </div>*@
+                    <div class="col-md-4">
+                        <h5 class="text-uppercase">dirección</h5>
+                        <ul class="f-list">
+                            <li>
+                                <a href="#">Almirante Brown 233</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h5 class="text-uppercase">teléfono</h5>
+                        <ul class="f-list">
+                            <li>
+                                <a href="#">3492-454545</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h5 class="text-uppercase">email</h5>
+                        <ul class="f-list">
+                            <li>
+                                <a href="#">mterragni@estudioterragni.com.ar</a>
+                            </li>                         
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="secondary-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <span class="m-top-10">Ignacio Sanmartino | 2021</span>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="social-link circle pull-right">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+        <!--footer end -->
+    </div>
+    @Scripts.Render("~/bundles/scripts")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
