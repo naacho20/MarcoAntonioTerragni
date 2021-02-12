@@ -253,6 +253,7 @@
     <Content Include="Views\Home\AboutMe.cshtml" />
     <Content Include="Views\Articles\Index.cshtml" />
     <Content Include="Views\Articles\Article.cshtml" />
+    <None Include="Properties\PublishProfiles\terragnijurista - Web Deploy.pubxml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
